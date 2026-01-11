@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>GVB_AI | أدوات الذكاء الاصطناعي</title>
+
+  <!-- Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GVB_AI منصة احترافية تقدم أدوات ذكاء اصطناعي متقدمة باللغة العربية، برعاية OMB.">
+
+  <!-- Security Basics -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="no-referrer">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0d1a;
+      --card: #12162a;
+      --border: #1f2440;
+      --primary: #5b7cfa;
+      --text: #e6e9ff;
+      --muted: #9aa3d9;
+      --glow: rgba(91,124,250,0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: radial-gradient(circle at top, #11163a, var(--bg));
+      color: var(--text);
+    }
+
+    /* ===== Header ===== */
+    header {
+      padding: 40px 20px 25px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: var(--primary);
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    /* ===== Tools Grid ===== */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .tool-card {
+      background: linear-gradient(180deg, var(--card), #0e1226);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 25px;
+      position: relative;
+      overflow: hidden;
+      transition: 0.35s ease;
+    }
+
+    .tool-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, transparent 60%, var(--glow));
+      opacity: 0;
+      transition: 0.35s;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+
+    .tool-card:hover::before {
+      opacity: 1;
+    }
+
+    .tool-icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .tool-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+
+    .tool-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .tool-status {
+      margin-top: 18px;
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: rgba(91,124,250,0.12);
+      color: var(--primary);
+      border: 1px solid rgba(91,124,250,0.3);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer span {
+      color: var(--primary);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header>
+    <h1>أدوات GVB_AI</h1>
+    <p>منصة احترافية لأدوات الذكاء الاصطناعي – مدعومة من OMB</p>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main class="container">
+    <section class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-icon">🤖</div>
+        <h3 class="tool-title">دردشة ذكاء اصطناعي</h3>
+        <p class="tool-desc">
+          تفاعل مع نموذج ذكاء اصطناعي يفهم العربية بعمق، ويقدم إجابات دقيقة وسريعة.
+        </p>
+        <span class="tool-status">قريبًا</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">✍️</div>
+        <h3 class="tool-title">كاتب ذكي</h3>
+        <p class="tool-desc">
+          إنشاء مقالات، منشورات، وسيناريوهات باحترافية عالية خلال ثوانٍ.
+        </p>
+        <span class="tool-status">قريبًا</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🧠</div>
+        <h3 class="tool-title">تلخيص النصوص</h3>
+        <p class="tool-desc">
+          تحويل النصوص الطويلة إلى ملخصات دقيقة مع الحفاظ على المعنى الأساسي.
+        </p>
+        <span class="tool-status">قريبًا</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">💡</div>
+        <h3 class="tool-title">توليد الأفكار</h3>
+        <p class="tool-desc">
+          أفكار مشاريع، محتوى، إعلانات، وحلول إبداعية مبنية على الذكاء الاصطناعي.
+        </p>
+        <span class="tool-status">قريبًا</span>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    © 2026 <span>GVB_AI</span> — Developed by <span>OMB</span>
+  </footer>
+
+</body>
+</html>
