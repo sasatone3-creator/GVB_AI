@@ -1,84 +1,128 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>GVB_AI | منصة الذكاء الاصطناعي العربية</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GVB_AI منصة عربية لأدوات الذكاء الاصطناعي – دردشة، كتابة، توليد أفكار">
-    <style>
-        body {
-            margin: 0;
-            font-family: Tahoma, Arial;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #fff;
-            text-align: center;
-        }
-        header {
-            padding: 40px 20px;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #00ffd5;
-        }
-        p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-        .card {
-            background: rgba(0,0,0,0.4);
-            margin: 20px auto;
-            padding: 25px;
-            border-radius: 15px;
-            max-width: 350px;
-            box-shadow: 0 0 20px rgba(0,255,213,0.2);
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 25px;
-            background: #00ffd5;
-            color: #000;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 15px;
-            font-size: 0.9em;
-            opacity: 0.7;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GVB_AI | منصة الذكاء الاصطناعي</title>
+
+  <meta name="description" content="GVB_AI منصة عربية متقدمة لأدوات الذكاء الاصطناعي مقدمة من OMB" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f2027, #000);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .logo {
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      color: #00f7ff;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #cfd8dc;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 30px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 40px rgba(0, 247, 255, 0.15);
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 36px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #00f7ff, #0066ff);
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 10px 30px rgba(0, 247, 255, 0.4);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0, 247, 255, 0.6);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #9e9e9e;
+    }
+
+    footer span {
+      color: #00f7ff;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 2.4rem;
+      }
+      .card h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="container">
+    <div class="logo">GVB_AI</div>
+    <div class="tagline">منصة أدوات الذكاء الاصطناعي بالعربية</div>
 
-<header>
-    <h1>GVB_AI</h1>
-    <p>منصة أدوات ذكاء اصطناعي بالعربي 🇪🇬</p>
-</header>
+    <div class="card">
+      <h2>ذكاء اصطناعي أقرب لك</h2>
+      <p>
+        GVB_AI هي منصة عربية تهدف إلى توفير أدوات ذكاء اصطناعي متقدمة
+        تساعد الأفراد والشركات على الإنجاز، الإبداع، واتخاذ قرارات أذكى
+        بسهولة وأمان.
+      </p>
 
-<div class="card">
-    <h2>🤖 دردشة ذكية</h2>
-    <p>تحدث مع ذكاء اصطناعي يفهمك بالعربي</p>
-    <a class="btn" href="#">قريبًا</a>
-</div>
+      <a href="#" class="btn">ابدأ الآن</a>
+    </div>
 
-<div class="card">
-    <h2>✍️ كتابة ذكية</h2>
-    <p>مقالات – أفكار – سكريبتات تلقائيًا</p>
-    <a class="btn" href="#">قريبًا</a>
-</div>
-
-<div class="card">
-    <h2>💡 توليد أفكار</h2>
-    <p>أفكار مشاريع – محتوى – ربح</p>
-    <a class="btn" href="#">قريبًا</a>
-</div>
-
-<footer>
-    © 2026 GVB_AI | Developed by Mostafa
-</footer>
-
+    <footer>
+      © 2026 جميع الحقوق محفوظة — تم التطوير بواسطة <span>OMB</span>
+    </footer>
+  </div>
 </body>
 </html>
