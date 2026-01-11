@@ -2,127 +2,146 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GVB_AI | منصة الذكاء الاصطناعي</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GVB_AI | منصة ذكاء اصطناعي عربية</title>
 
-  <meta name="description" content="GVB_AI منصة عربية متقدمة لأدوات الذكاء الاصطناعي مقدمة من OMB" />
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="no-referrer">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
 
   <style>
+    :root {
+      --bg: #0b0f1a;
+      --card: #12172a;
+      --primary: #5b7cfa;
+      --text: #ffffff;
+      --muted: #aab0ff;
+    }
+
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont;
     }
 
     body {
-      background: radial-gradient(circle at top, #0f2027, #000);
-      color: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin: 0;
+      background: radial-gradient(circle at top, #151b3a, var(--bg));
+      color: var(--text);
     }
 
-    .container {
-      text-align: center;
+    header {
       padding: 40px 20px;
-      max-width: 800px;
-      width: 100%;
+      text-align: center;
     }
 
-    .logo {
-      font-size: 3.2rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-      color: #00f7ff;
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      letter-spacing: 1px;
     }
 
-    .tagline {
-      font-size: 1.2rem;
-      color: #cfd8dc;
-      margin-bottom: 30px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 16px;
-      padding: 30px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 0 40px rgba(0, 247, 255, 0.15);
-    }
-
-    .card h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
-
-    .card p {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: #e0e0e0;
-      margin-bottom: 25px;
+    header p {
+      color: var(--muted);
+      margin-top: 10px;
+      font-size: 1.1rem;
     }
 
     .btn {
+      margin-top: 25px;
       display: inline-block;
-      padding: 14px 36px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #00f7ff, #0066ff);
+      padding: 14px 28px;
+      background: linear-gradient(135deg, var(--primary), #8fa3ff);
       color: #000;
-      font-weight: bold;
+      border-radius: 30px;
       text-decoration: none;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 10px 30px rgba(0, 247, 255, 0.4);
+      font-weight: bold;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(0, 247, 255, 0.6);
+      transform: scale(1.05);
+      box-shadow: 0 0 25px var(--primary);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 40px rgba(91,124,250,0.4);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #dbe0ff;
     }
 
     footer {
-      margin-top: 40px;
+      text-align: center;
+      padding: 30px 15px;
+      background: #070a14;
+      color: #8d93ff;
       font-size: 0.9rem;
-      color: #9e9e9e;
-    }
-
-    footer span {
-      color: #00f7ff;
-      font-weight: 600;
     }
 
     @media (max-width: 600px) {
-      .logo {
-        font-size: 2.4rem;
-      }
-      .card h2 {
-        font-size: 1.5rem;
+      header h1 {
+        font-size: 2.1rem;
       }
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <div class="logo">GVB_AI</div>
-    <div class="tagline">منصة أدوات الذكاء الاصطناعي بالعربية</div>
 
-    <div class="card">
-      <h2>ذكاء اصطناعي أقرب لك</h2>
-      <p>
-        GVB_AI هي منصة عربية تهدف إلى توفير أدوات ذكاء اصطناعي متقدمة
-        تساعد الأفراد والشركات على الإنجاز، الإبداع، واتخاذ قرارات أذكى
-        بسهولة وأمان.
-      </p>
+  <header>
+    <h1>GVB_AI</h1>
+    <p>منصة أدوات الذكاء الاصطناعي العربية — مستقبل التقنية يبدأ هنا</p>
+    <a href="#" class="btn">ابدأ الآن</a>
+  </header>
 
-      <a href="#" class="btn">ابدأ الآن</a>
+  <section>
+    <div class="grid">
+      <div class="card">
+        <h3>🤖 أدوات ذكاء اصطناعي</h3>
+        <p>حلول ذكية للكتابة، التحليل، البرمجة، والتصميم.</p>
+      </div>
+      <div class="card">
+        <h3>🔐 أمان عالي</h3>
+        <p>تصميم آمن، بدون تتبع، مع حماية HTTPS افتراضية.</p>
+      </div>
+      <div class="card">
+        <h3>⚡ سرعة وأداء</h3>
+        <p>واجهة خفيفة وسريعة تعمل بكفاءة على الموبايل.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 عربي عالمي</h3>
+        <p>منصة عربية بمعايير عالمية تنافس الكبار.</p>
+      </div>
     </div>
+  </section>
 
-    <footer>
-      © 2026 جميع الحقوق محفوظة — تم التطوير بواسطة <span>OMB</span>
-    </footer>
-  </div>
+  <footer>
+    © 2026 GVB_AI — تم التطوير بواسطة <strong>OMB</strong>
+  </footer>
+
 </body>
 </html>
