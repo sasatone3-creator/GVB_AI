@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>GVB_AI | دردشة الذكاء الاصطناعي</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: #0a0d1a;
+      color: #e6e9ff;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #1f2440;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #5b7cfa;
+      font-size: 1.6rem;
+    }
+
+    .chat-box {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+      border-radius: 16px;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .user {
+      background: #5b7cfa;
+      color: #fff;
+      margin-right: auto;
+      border-bottom-right-radius: 4px;
+    }
+
+    .ai {
+      background: #12162a;
+      color: #e6e9ff;
+      margin-left: auto;
+      border-bottom-left-radius: 4px;
+    }
+
+    .input-area {
+      display: flex;
+      padding: 15px;
+      border-top: 1px solid #1f2440;
+      gap: 10px;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 12px;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .input-area button {
+      background: #5b7cfa;
+      border: none;
+      color: #fff;
+      padding: 0 22px;
+      border-radius: 12px;
+      font-family: 'Cairo', sans-serif;
+      cursor: pointer;
+    }
+
+    .input-area button:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 10px;
+      color: #8d93ff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>دردشة GVB_AI</h1>
+</header>
+
+<div class="chat-box" id="chat">
+  <div class="message ai">مرحبًا 👋 أنا مساعد GVB_AI، كيف أستطيع مساعدتك؟</div>
+</div>
+
+<div class="input-area">
+  <input type="text" id="input" placeholder="اكتب رسالتك هنا..." />
+  <button onclick="send()">إرسال</button>
+</div>
+
+<footer>
+  © 2026 GVB_AI — OMB
+</footer>
+
+<script>
+  function send() {
+    const input = document.getElementById("input");
+    const chat = document.getElementById("chat");
+    const text = input.value.trim();
+    if (!text) return;
+
+    // User message
+    const userMsg = document.createElement("div");
+    userMsg.className = "message user";
+    userMsg.textContent = text;
+    chat.appendChild(userMsg);
+
+    input.value = "";
+    chat.scrollTop = chat.scrollHeight;
+
+    // Fake AI response (placeholder)
+    setTimeout(() => {
+      const aiMsg = document.createElement("div");
+      aiMsg.className = "message ai";
+      aiMsg.textContent = "⚙️ هذه نسخة تجريبية. سيتم تفعيل الذكاء الاصطناعي قريبًا.";
+      chat.appendChild(aiMsg);
+      chat.scrollTop = chat.scrollHeight;
+    }, 600);
+  }
+</script>
+
+</body>
+</html>
