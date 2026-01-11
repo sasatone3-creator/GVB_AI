@@ -6,14 +6,14 @@
 
   <!-- Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GVB_AI منصة احترافية تقدم أدوات ذكاء اصطناعي متقدمة باللغة العربية، برعاية OMB.">
+  <meta name="description" content="GVB_AI منصة أدوات ذكاء اصطناعي احترافية باللغة العربية، مدعومة من OMB.">
 
-  <!-- Security Basics -->
+  <!-- Basic Security -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="no-referrer">
 
-  <!-- Fonts -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -27,9 +27,7 @@
       --glow: rgba(91,124,250,0.35);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -38,77 +36,59 @@
       color: var(--text);
     }
 
-    /* ===== Header ===== */
     header {
-      padding: 40px 20px 25px;
+      padding: 45px 20px 30px;
       text-align: center;
       border-bottom: 1px solid var(--border);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       color: var(--primary);
-      letter-spacing: 1px;
     }
 
     header p {
       margin-top: 10px;
       color: var(--muted);
-      font-size: 1rem;
     }
 
-    /* ===== Container ===== */
     .container {
       max-width: 1200px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 45px 20px;
     }
 
-    /* ===== Tools Grid ===== */
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
+      gap: 28px;
     }
 
     .tool-card {
       background: linear-gradient(180deg, var(--card), #0e1226);
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 25px;
+      border-radius: 20px;
+      padding: 26px;
+      cursor: pointer;
       position: relative;
-      overflow: hidden;
       transition: 0.35s ease;
     }
 
-    .tool-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top, transparent 60%, var(--glow));
-      opacity: 0;
-      transition: 0.35s;
-    }
-
     .tool-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    }
-
-    .tool-card:hover::before {
-      opacity: 1;
+      transform: translateY(-7px);
+      box-shadow: 0 25px 45px rgba(0,0,0,0.6);
     }
 
     .tool-icon {
-      font-size: 2rem;
-      margin-bottom: 15px;
+      font-size: 2.2rem;
+      margin-bottom: 14px;
     }
 
     .tool-title {
+      margin: 0 0 10px;
       font-size: 1.25rem;
       font-weight: 700;
-      margin: 0 0 10px;
     }
 
     .tool-desc {
@@ -118,21 +98,20 @@
     }
 
     .tool-status {
-      margin-top: 18px;
       display: inline-block;
+      margin-top: 18px;
       font-size: 0.75rem;
-      padding: 6px 12px;
+      padding: 6px 14px;
       border-radius: 20px;
-      background: rgba(91,124,250,0.12);
+      background: rgba(91,124,250,0.15);
       color: var(--primary);
-      border: 1px solid rgba(91,124,250,0.3);
+      border: 1px solid rgba(91,124,250,0.35);
     }
 
-    /* ===== Footer ===== */
     footer {
       border-top: 1px solid var(--border);
       text-align: center;
-      padding: 25px 15px;
+      padding: 25px;
       font-size: 0.85rem;
       color: var(--muted);
     }
@@ -145,59 +124,45 @@
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
-  <header>
-    <h1>أدوات GVB_AI</h1>
-    <p>منصة احترافية لأدوات الذكاء الاصطناعي – مدعومة من OMB</p>
-  </header>
+<header>
+  <h1>أدوات GVB_AI</h1>
+  <p>منصة احترافية لأدوات الذكاء الاصطناعي — OMB</p>
+</header>
 
-  <!-- ===== Main ===== -->
-  <main class="container">
-    <section class="tools-grid">
+<main class="container">
+  <section class="tools-grid">
 
-      <div class="tool-card">
-        <div class="tool-icon">🤖</div>
-        <h3 class="tool-title">دردشة ذكاء اصطناعي</h3>
-        <p class="tool-desc">
-          تفاعل مع نموذج ذكاء اصطناعي يفهم العربية بعمق، ويقدم إجابات دقيقة وسريعة.
-        </p>
-        <span class="tool-status">قريبًا</span>
-      </div>
+    <!-- CHAT -->
+    <div class="tool-card" onclick="location.href='chat.html'">
+      <div class="tool-icon">🤖</div>
+      <h3 class="tool-title">دردشة ذكاء اصطناعي</h3>
+      <p class="tool-desc">
+        تواصل مع مساعد ذكي يفهم العربية ويقدم ردود واضحة وسريعة.
+      </p>
+      <span class="tool-status">متاح الآن</span>
+    </div>
 
-      <div class="tool-card">
-        <div class="tool-icon">✍️</div>
-        <h3 class="tool-title">كاتب ذكي</h3>
-        <p class="tool-desc">
-          إنشاء مقالات، منشورات، وسيناريوهات باحترافية عالية خلال ثوانٍ.
-        </p>
-        <span class="tool-status">قريبًا</span>
-      </div>
+    <!-- FUTURE TOOLS -->
+    <div class="tool-card">
+      <div class="tool-icon">✍️</div>
+      <h3 class="tool-title">كاتب ذكي</h3>
+      <p class="tool-desc">توليد محتوى احترافي خلال ثوانٍ.</p>
+      <span class="tool-status">قريبًا</span>
+    </div>
 
-      <div class="tool-card">
-        <div class="tool-icon">🧠</div>
-        <h3 class="tool-title">تلخيص النصوص</h3>
-        <p class="tool-desc">
-          تحويل النصوص الطويلة إلى ملخصات دقيقة مع الحفاظ على المعنى الأساسي.
-        </p>
-        <span class="tool-status">قريبًا</span>
-      </div>
+    <div class="tool-card">
+      <div class="tool-icon">🧠</div>
+      <h3 class="tool-title">تلخيص النصوص</h3>
+      <p class="tool-desc">اختصار النصوص الطويلة بدقة.</p>
+      <span class="tool-status">قريبًا</span>
+    </div>
 
-      <div class="tool-card">
-        <div class="tool-icon">💡</div>
-        <h3 class="tool-title">توليد الأفكار</h3>
-        <p class="tool-desc">
-          أفكار مشاريع، محتوى، إعلانات، وحلول إبداعية مبنية على الذكاء الاصطناعي.
-        </p>
-        <span class="tool-status">قريبًا</span>
-      </div>
+  </section>
+</main>
 
-    </section>
-  </main>
-
-  <!-- ===== Footer ===== -->
-  <footer>
-    © 2026 <span>GVB_AI</span> — Developed by <span>OMB</span>
-  </footer>
+<footer>
+  © 2026 <span>GVB_AI</span> — Developed by <span>OMB</span>
+</footer>
 
 </body>
 </html>
